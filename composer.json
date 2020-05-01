@@ -1,0 +1,33 @@
+{
+    "name": "drift/react-streams",
+    "description": "Lightweight library that provides extra classes for ReactPHP streams.",
+    "keywords": ["Stream", "ReactPHP", "async"],
+    "homepage": "https://github.com/driftphp/reactphp-streams",
+    "license": "MIT",
+
+    "authors": [
+        {
+            "name": "Marc Morera",
+            "email": "yuhu@mmoreram.com"
+        }
+    ],
+
+    "require": {
+        "php": "^7.3",
+        "react/stream": "^1.0",
+        "evenement/evenement": "^3.0 || ^2.0 || ^1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "7.5.17"
+    },
+    "autoload": {
+        "psr-4": {
+            "React\\Stream\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "React\\Tests\\Stream\\": "tests/"
+        }
+    }
+}
