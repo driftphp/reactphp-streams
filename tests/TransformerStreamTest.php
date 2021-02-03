@@ -26,7 +26,7 @@ class TransformerStreamTest extends TestCase
     private $output;
     private $transformer;
 
-    public function setUp()
+    public function setUp() : void
     {
         $stream = fopen('php://temp', 'r+');
         $loop = $this->getMockBuilder('React\EventLoop\LoopInterface')->getMock();
@@ -117,10 +117,10 @@ class TransformerStreamTest extends TestCase
 
     /**
      * @test
-     * @expectedException \InvalidArgumentException
      */
     public function itShouldRejectInvalidCallback()
     {
+        $this->expectException(\InvalidArgumentException::class);
         TransformerStream::withCallback($this->output, 123);
     }
 
